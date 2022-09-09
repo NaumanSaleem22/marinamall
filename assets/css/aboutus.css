@@ -310,6 +310,19 @@ p {
     .brand-section-background{
         background-repeat: repeat;
     }
+    .footer-div-outer{
+        flex-direction: column;
+    }
+    .footer-bottom-flex{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:20px;
+    }
+    .icon{
+        font-size: 30px !important;
+        width: 35px;
+    }
+    
 }
 
 @media (max-width:414px){
