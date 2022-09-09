@@ -132,6 +132,12 @@ p {
     display: flex; 
     align-items: center;
     min-width: 300px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.brand-inner-div-area:hover{
+    transform: scale(1.1);
 }
 .brands-text-head{
     font-family: 'euc-regular';
@@ -154,10 +160,16 @@ p {
 }
 .gallery-img-div{
     z-index:3;
+    transition: 0.2s ease-in-out all;
+}
+.gallery-img-div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .gallery-img{
     max-width: 420px;  
     z-index: 3;
+
 }
 .dot-square-div{
     position: absolute;
