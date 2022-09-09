@@ -272,7 +272,10 @@ p {
     font-size: 50px !important;
     width: 70px;
 }
- 
+ .footer-blue-stripe{
+    background-color: #3099d2;
+    padding-bottom: 40px;
+ }
 @media (max-width :1440.99px){
   .about-us-second-marina-world-section{
     padding:100px 172px;
