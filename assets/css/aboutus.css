@@ -31,6 +31,44 @@ html, body {
 	background: #ffffff;
 	overflow-x: hidden;
 }
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+.header-right-top, .header-right-main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+}
+.header-right ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header-right ul li {
+    margin-right: 40px;
+}
+.header-right ul li a {
+    font-size: 18px;
+    font-family: 'euc-light', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header-right .lang-btns li {
+    margin-right: 0;
+}
 p {
 	font-family: 'euc-regular', sans-serif;
 }
