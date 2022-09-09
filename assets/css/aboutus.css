@@ -320,7 +320,20 @@ p {
         max-width: 650px; 
         font-family: 'euc-regular';
     }
-    
+
+    .header-row{
+        flex-direction: column;
+    }
+    .main-header{
+        top:-20px;
+    }
+    .header-right-top{
+        padding:5px 0px;
+    }
+    .header-right-top, .header-right-main {
+        display: flex;
+        justify-content: flex-start;  
+    }
 }
 
 @media (max-width:768.99px){
@@ -380,5 +393,8 @@ p {
     .dot-square-div{
         right: 2px;
         top:8px;
+    }
+    .header-right ul{
+        flex-direction: column;
     }
 }
