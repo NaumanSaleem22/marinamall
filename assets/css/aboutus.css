@@ -1,0 +1,261 @@
+@font-face {
+	font-family: 'euc-light';
+	src: url(../fonts/Euclid-Circular-A-Light.ttf);
+}
+@font-face {
+	font-family: 'euc-regular';
+	src: url(../fonts/Euclid-Circular-A-Regular.ttf);
+}
+@font-face {
+	font-family: 'euc-medium';
+	src: url(../fonts/Euclid-Circular-A-Medium.ttf);
+}
+@font-face {
+	font-family: 'euc-semibold';
+	src: url(../fonts/Euclid-Circular-A-SemiBold.ttf);
+}
+@font-face {
+	font-family: 'euc-bold';
+	src: url(../fonts/Euclid-Circular-A-Bold.ttf);
+}
+* {
+	box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'euc-regular', sans-serif;
+	background: #ffffff;
+	overflow-x: hidden;
+}
+p {
+	font-family: 'euc-regular', sans-serif;
+}
+.banner-about-us-background{
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: 100vh;
+     position: relative;
+}
+
+.banner-about-us-background .banner-content{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 50%;
+    text-align: center;
+    
+    
+}
+
+.banner-about-us-background .banner-content .banner-text-heading{
+    color:white;
+    font-size: 48px;
+    font-family: 'euc-regular';
+    font-weight: 600;
+}
+
+.about-us-second-marina-world-section{
+    background-image: url(../images/about-back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 100px 300px;
+}
+
+.about-us-second-marina-world-section .second-section-content-div{
+    width: 50%;
+    max-width: 550px; 
+    font-family: 'euc-regular';
+}
+
+.about-us-second-marina-world-section .second-section-content-div h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+.about-us-second-marina-world-section .second-section-content-div p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.blue-text {
+	color: #2d87c8;
+}
+
+.brand-section-background{
+    background-image: url(../images/brands-back.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:150px 0px
+}
+
+.quality-of-work-main-work-div{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    padding: 50px 0px;
+    gap:80px;
+}
+.quality-of-work-text{
+    font-family: 'euc-regular';
+    font-size: 36px;  
+}
+.work-heading{
+    font-family: 'euc-regular';
+    font-size:38px;
+    font-weight: 700;
+}
+.gallery-heading{
+    font-family: 'euc-regular';
+    font-size:38px;
+    
+}
+.brand-inner-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap:80px; */
+    padding-bottom:20px;
+}
+.brand-inner-div-area{
+    display: flex; 
+    align-items: center;
+    min-width: 300px;
+}
+.brands-text-head{
+    font-family: 'euc-regular';
+    font-size: 24px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.brands-text-head-bold{
+    font-weight: 600;
+}
+.quality-of-work-subtext{
+    font-size: 20px;
+}
+.gallery-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ 
+}
+.gallery-img-div{
+    z-index:3;
+}
+.gallery-img{
+    max-width: 420px;  
+    z-index: 3;
+}
+.dot-square-div{
+    position: absolute;
+    z-index:1;
+    right: -80px;
+    top:-40px
+}
+
+@media (max-width :1440.99px){
+  .about-us-second-marina-world-section{
+    padding:100px 172px;
+  }
+  .quality-of-work-main-work-div{
+    gap:50px;
+  }
+  .brand-inner-div-area{
+    min-width: 292px;
+  }
+  .gallery-div{
+    justify-content: center;
+    gap:20px;
+  }
+  .gallery-img{
+    max-width: 390px;
+  }
+  .dot-square-div{
+    right: -60px;
+    top:-10px
+  }
+}
+
+@media (max-width:1024.99px){
+   
+    .about-us-second-marina-world-section{
+        padding:100px 0px;
+    }
+    .about-us-second-marina-world-section .second-section-content-div{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .quality-of-work-main-work-div{
+       flex-wrap: wrap;
+    }
+    .gallery-heading-div{
+        
+        padding-top: 50px;
+    }
+    .about-us-second-marina-world-section .second-section-content-div{
+        width: 60%;
+        max-width: 650px; 
+        font-family: 'euc-regular';
+    }
+    
+}
+
+@media (max-width:768.99px){
+  .brand-section-background{
+    padding:50px 0px;
+  }
+    .about-us-second-marina-world-section .second-section-content-div{
+        width: 70%;
+        max-width: 650px; 
+        font-family: 'euc-regular';
+    }
+    .quality-of-work-main-work-div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-inner-1{
+        flex-direction: column;
+    }
+    .brand-inner-div-area{
+        padding-bottom: 10px;
+    }
+    .gallery-div{
+        flex-direction: column;
+    }
+    .gallery-heading-div{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .brand-section-background{
+        background-repeat: repeat;
+    }
+}
+
+@media (max-width:414px){
+    .gallery-img{
+        max-width: 300px;
+    }
+    .gallery-div{
+        gap:0px;
+    }
+    .dot-square-img{
+        max-width: 150px;
+    }
+    .dot-square-div{
+        right: 2px;
+        top:8px;
+    }
+}
