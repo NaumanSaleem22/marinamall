@@ -226,12 +226,12 @@
                 <div data-aos="fade-up" data-aos-duration="1000"
                 data-aos-anchor-placement="center-bottom" class="gallery-div">
                     <div class="gallery-img-div">
-                        <img class="gallery-img" loading="lazy" src="./assets/images/gallery1.png"/>
+                        <img class="gallery-img lazy" data-src="./assets/images/gallery1.png"/>
                     </div> 
-                    <div class="gallery-img-div">  <img  class="gallery-img" src="./assets/images/gallery2.png"/></div>
-                    <div class="gallery-img-div">  <img  class="gallery-img" src="./assets/images/gallery3.png"/></div>
+                    <div class="gallery-img-div">  <img  class="gallery-img lazy" data-src="./assets/images/gallery2.png"/></div>
+                    <div class="gallery-img-div">  <img  class="gallery-img lazy" data-src="./assets/images/gallery3.png"/></div>
                     <div class="dot-square-div">
-                        <img class="dot-square-img" src="./assets/images/dots-square.png"/>
+                        <img class="dot-square-img lazy" data-src="./assets/images/dots-square.png"/>
                     </div>
                 </div>
             </div> 
@@ -306,7 +306,37 @@
               AOS.init();
             </script>
 
-
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+            </script>
     </body>
 
 </html>
